@@ -101,7 +101,7 @@ body {
 	margin: 0 auto;
 	height: 200px;
 	width: 200px;
-	background: url("/images/mike.png");
+	background: url("../images/mike.png");
 	background-size: cover;
 	border-radius: 50%;
 	text-align: center;
@@ -162,51 +162,51 @@ body {
 }
 
 .php-project {
-	background-image: url("/images/logo-php-xxl.png");
+	background-image: url("../images/logo-php-xxl.png");
 }
 
 .php-project:hover {
-	background-image: url("/images/php.png");	
+	background-image: url("../images/php.png");	
 }
 
 .css-project {
-	background-image: url("/images/CSS3-badge-logo-big.png");
+	background-image: url("../images/CSS3-badge-logo-big.png");
 }
 
 .css-project:hover {
-	background-image: url("/images/cssproject.png");
+	background-image: url("../images/cssproject.png");
 }
 
 .jquery-project {
-	background-image: url("/images/jquery-logo.png");
+	background-image: url("../images/jquery-logo.png");
 }
 
 .jquery-project:hover {
-	background-image: url("/images/jquery-code.png");
+	background-image: url("../images/jquery-code.png");
 }
 
 .twitter-project {
-	background-image: url("/images/twitter_logoreal.png");
+	background-image: url("../images/twitter_logoreal.png");
 }
 
 .twitter-project:hover {
-	background-image: url("/images/twitter.png");
+	background-image: url("../images/twitter.png");
 }
 
 .puppylove-project {
-	background-image: url("/images/puppy-love.png");
+	background-image: url("../images/puppy-love.png");
 }
 
 .puppylove-project:hover {
-	background-image: url("/images/puppy-code.png");	
+	background-image: url("../images/puppy-code.png");	
 }
 
 .ibuild-project {
-	background-image: url("/images/ibuildpic.png"); 
+	background-image: url("../images/ibuildpic.png"); 
 }
 
 .ibuild-project:hover {
-	background-image: url("/images/ibuild-code.png");	
+	background-image: url("../images/ibuild-code.png");	
 }
 
 .contact {

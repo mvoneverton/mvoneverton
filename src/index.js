@@ -38,7 +38,10 @@ $(document).ready(function() {
     		dataType: "json",
     		data: $("form.contact-form").serialize(),
     		success: function(data){
-    			$.post("../contact.inc.php", data);
+    			$.post("../contact.inc.php", data).
+    			done(function () {
+    				console.log("got it")
+    			});
     			alert("Thank you");
     			$("form.contact-form").reset();
     		}

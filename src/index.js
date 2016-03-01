@@ -32,7 +32,7 @@ $(document).ready(function() {
     } else {
     	$.ajax({
     		type: "POST",
-    		url: "../contact-form.php",
+    		url: "../contact.inc.php",
     		data: dataString,
     		cache: false,
     		success: function(result){

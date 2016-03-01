@@ -33,7 +33,7 @@ $(document).ready(function() {
     	alert("Please complete required fields");
     } else {
     	$.ajax({
-    		type: "POST",
+    		type: "post",
     		url: "../contact.inc.php",
     		dataType: "json",
     		data: $("form.contact-form").serialize(),

@@ -1,0 +1,277 @@
+/*Inherited*/
+
+html {
+    box-sizing: border-box;
+    color: #444;
+    font: 14pt 'Open Sans', Arial;
+    font-weight: 300;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+/*layout*/
+
+body {
+	margin: 0 auto;
+	background-color: #272822;
+}
+
+.background-image {
+	height: 100vh;
+	background-image: url("/images/background.png");
+	background-repeat: no-repeat;
+	position: fixed;
+	left: 0;
+	right: 0;
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+}
+
+.page > div {
+	width: 960px;
+  margin: 0 auto;
+  min-height: 400px;
+  position: relative;
+  background-color: rgba(0,0,0,0.87);
+  border-radius: 20px;
+}
+
+.primary-header {
+	text-align: center;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	margin: 0 auto;
+}
+
+.primary-header a:hover, .slogan a:hover {
+	color: #00FFFF;
+}
+
+.primary-header a {
+	font-size: 2vh;
+	color: rgba(0,170,212,0.68);
+	text-decoration: none;
+	padding: 50px;
+}
+
+.primary {
+	display: block;
+	text-align: center;
+}
+
+.tag-line .slogan > h1 {
+	color: #fff;
+	font: 9vh "Open-sans", Arial;
+	margin: 0 auto;
+}
+
+.slogan a {
+	color: rgba(0,170,212,0.68);
+	margin: 10px 10px 0 10px;
+	margin-bottom: 0 auto;
+}
+
+.slogan a:active {
+	color: #00FFFF;
+}
+
+.copywrite {
+	font-size: 1vh;
+	color: #ccc;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/*components*/
+
+.popout {
+	margin-top: 10px;
+}
+
+.popout .hero {
+	margin: 0 auto;
+	height: 200px;
+	width: 200px;
+	background: url("/images/mike.png");
+	background-size: cover;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.page .content {
+	padding: 5px;
+}
+
+.content h2 {
+	text-align: center;
+	color: rgba(0,170,212,0.68);
+	padding: 5px;
+}
+
+.content .about-me p {
+	color: #fff;
+	text-align: left;
+}
+
+.my-work > h2 {
+	color: rgba(0,170,212,0.68);
+	text-align: center;
+	margin: 0 auto;
+}
+
+.my-work .projects {
+	display: flex;
+  flex-wrap: wrap;
+}
+
+.projects .project {
+	width: calc(33.33%);
+	text-align: center;
+	padding: 10px;
+}
+
+.project .graphic {
+	margin: 0 auto;
+	width: 250px;
+	min-height: 250px;
+	border-radius: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.graphic:hover { 
+ -webkit-transform: scale(1.1); 
+ -moz-transform:    scale(1.1);
+ -ms-transform:     scale(1.1); 
+ -o-transform:      scale(1.1); 
+ text-shadow: 3px 3px 0 #333; 
+ cursor: pointer;
+}
+
+.graphic a {
+	display: none;
+}
+
+.php-project {
+	background-image: url("/images/logo-php-xxl.png");
+}
+
+.php-project:hover {
+	background-image: url("/images/php.png");	
+}
+
+.css-project {
+	background-image: url("/images/CSS3-badge-logo-big.png");
+}
+
+.css-project:hover {
+	background-image: url("/images/cssproject.png");
+}
+
+.jquery-project {
+	background-image: url("/images/jquery-logo.png");
+}
+
+.jquery-project:hover {
+	background-image: url("/images/jquery-code.png");
+}
+
+.twitter-project {
+	background-image: url("/images/twitter_logoreal.png");
+}
+
+.twitter-project:hover {
+	background-image: url("/images/twitter.png");
+}
+
+.puppylove-project {
+	background-image: url("/images/puppy-love.png");
+}
+
+.puppylove-project:hover {
+	background-image: url("/images/puppy-code.png");	
+}
+
+.ibuild-project {
+	background-image: url("/images/ibuildpic.png"); 
+}
+
+.ibuild-project:hover {
+	background-image: url("/images/ibuild-code.png");	
+}
+
+.contact {
+	padding: 10px;
+}
+
+.contact > div:first-child {
+	display: flex;
+}
+
+.contact h2 {
+	text-align: center;
+	margin: 0 auto;
+	color: rgba(0,170,212,0.68);
+}
+
+.contact-form {
+	width: 500px;
+}
+
+.contact-form > * {
+	display: block;
+	text-align: left;
+	margin: 10px;
+}
+
+.contact-form > textarea {
+	width: 95%;
+	min-height: 100px;
+}
+
+.contact-form input:focus {
+	outline-color: rgba(0,170,212,0.68);
+}
+
+.contact-form .button {
+	text-align: right;
+	padding: 3px;
+}
+
+.button > button {
+	border-radius: 5px;
+	background-color: rgba(0,170,212,0.68);
+	color: #fff;
+	border: none;
+}
+
+.contact-form label {
+	color: rgba(255,255,255,0.54);
+}
+
+.contact-form input {
+	border-radius: 5px;
+	width: 95%;
+}
+
+.required:after {
+	content: " *";
+	color: red;
+}
+
+.contact-number {
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+	right: 20px;
+	color: rgba(0,170,212,0.68);
+}

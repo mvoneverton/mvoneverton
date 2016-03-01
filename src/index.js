@@ -25,7 +25,7 @@ $(document).ready(function() {
     var usrData = name + email + phone + message;
     
     var dataString = "name1="+ name + " &email="+ email + " &phone=" + phone + " &message=" + message;
-    // console.log(dataString);
+
 
     if(name == "" || email == "" || phone == "") {
     	console.log("you didn't fill it out");
@@ -33,11 +33,10 @@ $(document).ready(function() {
     } else {
     	$.ajax({
     		type: "POST",
-    		url: "public/contact_form.php",
+    		url: "../public/contact_form.php",
     		data: dataString,
     		cache: false,
     		success: function(result){
-    			// console.log(dataString)
     			alert("Thank you");
     			$(".contact-form").reset();
     		}

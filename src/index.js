@@ -43,7 +43,7 @@ $(document).ready(function() {
     			$("form.contact-form").reset();
     		}
     	});
-    return false
+
     }
     	
   });

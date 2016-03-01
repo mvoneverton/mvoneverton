@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 	$(".contact-form").on("submit", function (e) {
 
-		e.preventDefault();
+		// e.preventDefault();
 		 
     var name = $(".name").val();
     var email = $(".email").val();
@@ -38,7 +38,7 @@ $(document).ready(function() {
     		dataType: "json",
     		data: $("form.contact-form").serialize(),
     		success: function(data){
-    			$.post("../contact.inc.php", data)
+    			$.post("../contact.inc.php", data);
     			alert("Thank you");
     			$("form.contact-form").reset();
     		}

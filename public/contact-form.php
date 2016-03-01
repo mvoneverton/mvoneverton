@@ -15,7 +15,6 @@ if ($dbconn->connect_error) {
 } 
 
 // Save input to the database
-// if(isset($_POST[""]))
 $nameval = $_POST["name1"];
 $emailval = $_POST["&email"];
 $phoneval = $_POST["&phone"];

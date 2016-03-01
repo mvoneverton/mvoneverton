@@ -20,7 +20,6 @@ $(document).ready(function() {
     var email = $(".email").val();
     var phone = $(".phone").val();
     var message = $(".message").val();
-    // console.log(name);
 
     var usrData = name + email + phone + message;
     

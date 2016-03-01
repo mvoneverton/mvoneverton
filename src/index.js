@@ -38,7 +38,8 @@ $(document).ready(function() {
     		cache: false,
     		success: function(result){
     			console.log(dataString)
-    			// alert("Thank you");
+    			alert("Thank you");
+    			$(".contact-form").reset();
     		}
     	});
     return false

@@ -33,11 +33,11 @@ $(document).ready(function() {
     	$.ajax({
     		type: "POST",
     		url: "../contact.inc.php",
-    		data: dataString,
+    		data: $("form.contact-form").serialize(),
     		cache: false,
     		success: function(result){
     			alert("Thank you");
-    			$(".contact-form").reset();
+    			$("form.contact-form").reset();
     		}
     	});
     return false

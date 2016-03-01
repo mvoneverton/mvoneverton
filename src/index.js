@@ -33,6 +33,7 @@ $(document).ready(function() {
     	$.ajax({
     		type: "POST",
     		url: "../contact.inc.php",
+    		dataType: "json",
     		data: $("form.contact-form").serialize(),
     		cache: false,
     		success: function(result){

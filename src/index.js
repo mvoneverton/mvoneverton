@@ -45,7 +45,7 @@ $(document).ready(function() {
     	});
 
     }
-    	
+    return false	
   });
 	
 	var AppRouter = Backbone.Router.extend({

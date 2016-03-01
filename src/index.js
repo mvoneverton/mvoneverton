@@ -33,11 +33,10 @@ $(document).ready(function() {
     	alert("Please complete required fields");
     } else {
     	$.ajax({
-    		type: "post",
+    		method: "POST",
     		url: "../contact.inc.php",
     		dataType: "json",
     		data: $("form.contact-form").serialize(),
-    		cache: false,
     		success: function(result){
     			alert("Thank you");
     			$("form.contact-form").reset();

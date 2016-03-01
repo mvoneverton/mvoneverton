@@ -20,12 +20,12 @@ $(document).ready(function() {
     var email = $(".email").val();
     var phone = $(".phone").val();
     var message = $(".message").val();
-    console.log(name);
+    // console.log(name);
 
     var usrData = name + email + phone + message;
     
     var dataString = "name1="+ name + " &email="+ email + " &phone=" + phone + " &message=" + message;
-    console.log(dataString);
+    // console.log(dataString);
 
     if(name == "" || email == "" || phone == "") {
     	console.log("you didn't fill it out");

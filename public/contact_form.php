@@ -16,10 +16,10 @@ if ($dbconn->connect_error) {
 
 // Save input to the database
 // if(isset($_POST[""]))
-$nameval = $_POST["name"];
-$emailval = $_POST["email"];
-$phoneval = $_POST["phone"];
-$messageval = $_POST["message"];
+$nameval = $_POST["name1"];
+$emailval = $_POST["&email"];
+$phoneval = $_POST["&phone"];
+$messageval = $_POST["&message"];
 $sql = "INSERT INTO user (name, email, phone, message)
 VALUES ('$nameval', '$emailval', '$phoneval', '$messageval')";
 

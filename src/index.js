@@ -37,7 +37,7 @@ $(document).ready(function() {
     		data: dataString,
     		cache: false,
     		success: function(result){
-    			console.log(dataString)
+    			// console.log(dataString)
     			alert("Thank you");
     			$(".contact-form").reset();
     		}

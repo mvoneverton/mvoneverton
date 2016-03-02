@@ -6,6 +6,39 @@
 	<link href='https://fonts.googleapis.com/css?family=Lobster|Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+
+	<script id="template-comment" type="text/x-handlebars-template">
+
+    <article class="comment">
+      <section class="body">
+        <div class="message">{{commentMessage}}</div>
+      </section>
+    </article>
+
+  </script>
+
+  <script id="template-thread" type="text/x-handlebars-template">
+
+      <section class="thread">
+        {{{commentTmpl}}}
+        <section class="replies">
+        {{{composeTmpl}}}
+        </section>
+      </section>
+
+  </script>
+
+  <script id="template-compose" type="text/x-handlebars-template">
+
+    <form class="compose">
+      <textarea></textarea>
+      <div class="button">
+        <button>Send</button>
+      </div>
+    </form>
+
+  </script>
 </head>
 <body>
 	<div class="background-image"></div>
@@ -68,27 +101,56 @@
 		</div>
 		<br>
 		<div class="contact"><a name="contact"></a>
-			<h2>Contact Michael</h2>
+
 			<div>
-				<form method="POST" class="contact-form">
-					<label class="required">Name:</label><input class="name" type="text" name="name" required>
-					<label class="required">Email:</label><input class="email" type="email" name="email" required>
-					<label class="required">Phone:</label><input class="phone" type="tel" name="phone" required>
-					<label>Message:</label><textarea class="message" type="text-area box" name="message"></textarea>
-					<div class="button">
-						<button name="sendbutton">Send</button>
-					</div>
-				</form>
+				<h2>Feedback:</h2>
+				<header class="message-form">
+					<p>I am always looking to improve my skills, if you have any suggestions on how I can do that, or would just like to leave a comment, please feel free to do so below.  Thank you!</p>
+					<form class="compose">
+						<label>Leave a comment:</label>
+						<textarea></textarea>
+						<div class="button">
+							<button>Submit</button>
+						</div>
+					</form>
+				</header>
 			</div>
 			<div class="contact-number">
-				<a href="mailto:mvoneverton@gmail.com">Email</a>
-				<h2>
+				<h2>Contact Michael directly</h2>
+				<h3>
 					Call: (480) 844-8544
-				</h2>
+				</h3>
+				<a href="mailto:contact@michaeleverton.com">Email</a>
 			</div>	
 		</div>
+		<br>
+		<div class="feedback">
+			<h2>Comments:</h2>
+			<section class="comments">
+
+				<section class="thread">
+
+					<article class="comment">
+						<section class="body">
+							<div class="message">You are doing awesome</div>
+						</section>
+					</article>
+
+					<section class="replies">
+
+						<form class="compose">
+							<textarea></textarea>
+							<div class="button">
+								<button>Send</button>
+							</div>
+						</form>
+
+					</section>
+				</section>
+
+			</section>
+		</div>
 	</div>
-	<br>
 	<footer>
 		<div class="copywrite">mvoneverton &copy 2016</div>
 	</footer>	

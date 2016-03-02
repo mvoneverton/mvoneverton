@@ -15,9 +15,17 @@ html {
 
 /*layout*/
 
+a:focus, a:active, button:focus {
+  outline: 0;
+}
+
 body {
 	margin: 0 auto;
 	background-color: #272822;
+}
+
+h2, button {
+	color: rgba(0,170,212,0.68);
 }
 
 .background-image {
@@ -211,11 +219,12 @@ body {
 
 .contact {
 	padding: 10px;
-}
-
-.contact > div:first-child {
 	display: flex;
 }
+
+/*.contact > div:first-child {
+	display: flex;
+}*/
 
 .contact h2 {
 	text-align: center;
@@ -223,26 +232,27 @@ body {
 	color: rgba(0,170,212,0.68);
 }
 
-.contact-form {
+.contact .message-form {
 	width: 500px;
 }
 
-.contact-form > * {
+.message-form > * {
 	display: block;
-	text-align: left;
+	text-align: center;
 	margin: 10px;
 }
 
-.contact-form > textarea {
+.message-form > textarea {
 	width: 95%;
 	min-height: 100px;
+	border-radius: 10px;
 }
 
-.contact-form input:focus {
-	outline-color: rgba(0,170,212,0.68);
+.message-form > p {
+	color: #fff;
 }
 
-.contact-form .button {
+.message-form .button {
 	text-align: right;
 	padding: 3px;
 }
@@ -254,24 +264,98 @@ body {
 	border: none;
 }
 
-.contact-form label {
+.message-form label {
 	color: rgba(255,255,255,0.54);
 }
 
-.contact-form input {
-	border-radius: 5px;
-	width: 95%;
+.contact .contact-number {
+	flex: 1;
+	color: #fff;
+	text-align: center;
 }
 
-.required:after {
-	content: " *";
-	color: red;
+.feedback {
+	padding: 10px;
+	text-align: center;
 }
 
-.contact-number {
-	position: absolute;
-	top: 50%;
-	bottom: 50%;
-	right: 20px;
-	color: rgba(0,170,212,0.68);
+.feedback .comments {
+	margin: 0 auto;
+	width: 50%;
+	text-align: left;
+	padding: 5px;
 }
+
+.compose > div {
+  margin-top: 10px;
+  text-align: right;
+  display: none;
+}
+
+.compose textarea {
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #C0E1ED;
+  display: block;
+  width: 100%;
+  padding: 4px;
+  resize: none;
+  height: 1.8em;
+}
+
+.compose.expand textarea {
+  height: 5em;
+}
+
+.compose.expand > div {
+  display: block;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 10px;
+  background-color: #fff;
+  border: 1px solid #C0E1ED;
+  border-radius: 10px;
+}
+
+.thread {
+  border-bottom: 1px solid #E1E8ED;
+}
+
+.thread .comment {
+  margin: 10px;
+}
+
+.comment {
+	display: flex;
+}
+
+.comment > section.body {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.comment .message {
+  margin-top: 0 auto;
+}
+
+.replies {
+  padding: 5px;
+  background-color: rgba(0,170,212,0.15);
+  display: none;
+}
+
+.replies .compose {
+  order: 99999;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #C4D8E6;
+}
+
+.thread.expand .replies {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+

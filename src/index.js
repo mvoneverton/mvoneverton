@@ -45,7 +45,6 @@ $(function() {
   });
 
 	$('.comments').on('click', '.comment', function () {
-		console.log("here");
     $(this).parent('.thread').toggleClass('expand');
     return false;
   });

@@ -39,7 +39,7 @@ $(function() {
 		window.open(project + projectID, "_blank");
 	});
 
-	$('.compose').on('click', 'textarea', function () {
+	$('.page').on('click', 'textarea', function () {
     $(this).parent('.compose').addClass('expand');
     return false;
   });

@@ -75,7 +75,7 @@ h2, button {
 }
 
 .tag-line .slogan > h1 {
-	color: #fff;
+	color: #ddd;
 	font: 9vh "Open-sans", Arial;
 	margin: 0 auto;
 }
@@ -126,7 +126,7 @@ h2, button {
 }
 
 .content .about-me p {
-	color: #fff;
+	color: #ddd;
 	text-align: left;
 }
 
@@ -249,7 +249,7 @@ h2, button {
 }
 
 .message-form > p {
-	color: #fff;
+	color: #ddd;
 }
 
 .message-form .button {
@@ -270,7 +270,7 @@ h2, button {
 
 .contact .contact-number {
 	flex: 1;
-	color: #fff;
+	color: #ddd;
 	text-align: center;
 }
 
@@ -294,7 +294,7 @@ h2, button {
 
 .compose textarea {
   border-radius: 3px;
-  background-color: #fff;
+  background-color: #ddd;
   border: 1px solid #C0E1ED;
   display: block;
   width: 100%;
@@ -315,7 +315,7 @@ h2, button {
   display: flex;
   flex-direction: column-reverse;
   margin-top: 10px;
-  background-color: #fff;
+  background-color: #ddd;
   border: 1px solid #C0E1ED;
   border-radius: 10px;
 }

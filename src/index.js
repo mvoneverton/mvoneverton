@@ -4,8 +4,33 @@ var Backbone = require('backbone');
 
 var app = app || {};
 
-$(document).ready(function() {
+$(function() {
 
+	var composeHtml = $('#template-compose').text();
+  var composeTmpl = Handlebars.compile(composeHtml);
+
+  var commentHtml = $('#template-comment').text();
+  var commentTmpl = Handlebars.compile(commentHtml);
+
+  var threadHtml = $('#template-thread').text();
+  var threadTmpl = Handlebars.compile(threadHtml);
+
+  var renderCompose = function() {
+    return composeTmpl();
+  };
+
+  var renderComment = function(message) {
+    return commentTmpl({
+      commentMessage: message,
+    });
+  };
+
+  var renderThread = function(comment, compose) {
+    return threadTmpl({
+      commentTmpl: comment,
+      composeTmpl: compose
+    });
+  };
 
 	var project = "https://www.github.com/mvoneverton/";
 
@@ -14,42 +39,37 @@ $(document).ready(function() {
 		window.open(project + projectID, "_blank");
 	});
 
-	$(".contact-form").on("submit", function (e) {
-
-		// e.preventDefault();
-		 
-    var name = $(".name").val();
-    var email = $(".email").val();
-    var phone = $(".phone").val();
-    var message = $(".message").val();
-
-    var usrData = name + email + phone + message;
-    
-    var dataString = "name1="+ name + " &email="+ email + " &phone=" + phone + " &message=" + message;
-
-
-    if(name == "" || email == "" || phone == "") {
-    	console.log("you didn't fill it out");
-    	alert("Please complete required fields");
-    } else {
-    	$.ajax({
-    		method: "GET",
-    		url: "../index.html",
-    		dataType: "json",
-    		data: $("form.contact-form").serialize(),
-    		success: function(data){
-    			$.post("../contact.inc.php", data).
-    			done(function () {
-    				console.log("got it")
-    			});
-    			alert("Thank you");
-    			$("form.contact-form").reset();
-    		}
-    	});
-
-    }
-    return false	
+	$('.compose').on('click', 'textarea', function () {
+    $(this).parent('.compose').addClass('expand');
+    return false;
   });
+
+	$('.comments').on('click', '.comment', function () {
+		console.log("here");
+    $(this).parent('.thread').toggleClass('expand');
+    return false;
+  });
+
+	$(".page").on("submit", "form", function () {
+		var message = $(this).find("textarea").val();
+		$(this)
+      .find('textarea')
+      .val('')
+      .parent('.compose')
+      .removeClass('expand');
+
+		if ($(this).parent("header").length) {
+			$(".comments").append(renderThread(renderComment(message), renderCompose()));
+
+		} else {
+			$(this).parent(".replies").append(renderComment(message));
+
+		};
+		return false
+	});
+
+		 
+    
 	
 	var AppRouter = Backbone.Router.extend({
 
